@@ -1,0 +1,13 @@
+<app-main></app-main>
+<h3>Select Checkbox</h3>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <input type="checkbox" [(ngModel)]="masterSelected" name="list_name" value="m1" (change)="checkUncheckAll()" >&nbsp; Select All<br>
+            <div  *ngFor="let item of checklist">
+                <input type="checkbox" [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" (change)="isAllSelected()">&nbsp; {{item.value}}<br>
+            </div>
+        </div>
+    </div>
+  </div>
+<hr>
